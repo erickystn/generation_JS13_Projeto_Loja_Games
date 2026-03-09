@@ -13,7 +13,6 @@ import { ProdutoModule } from './produto/produto.module';
       password: 'root',
       entities: [],
       database: 'db_loja_games',
-      logging: true,
       synchronize: true,
       autoLoadEntities: true,
     }),

@@ -14,7 +14,7 @@ export class CategoriaService {
     const resultado = await this.categoriaRepository.findOne({ where: { id } });
 
     if (resultado == null) {
-      throw new HttpException('Usuário não encontrado', HttpStatus.NOT_FOUND);
+      throw new HttpException('Categoria não encontrada', HttpStatus.NOT_FOUND);
     }
 
     return resultado;

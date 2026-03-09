@@ -38,7 +38,7 @@ export class ProdutoController {
 
   @Put()
   @HttpCode(HttpStatus.OK)
-  update(produto: Produto): Promise<Produto> {
+  update(@Body()produto: Produto): Promise<Produto> {
     return this.produtoService.update(produto);
   }
 

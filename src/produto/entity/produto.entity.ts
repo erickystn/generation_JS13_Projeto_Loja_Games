@@ -1,11 +1,12 @@
 import { Transform, Type } from 'class-transformer';
-import {  IsNotEmpty, IsNumber, IsObject, IsOptional, IsUrl, Length, Min, MinDate, ValidateNested } from 'class-validator';
+import {  IsNotEmpty, IsNumber, IsObject, IsOptional, IsUrl, Length, Min } from 'class-validator';
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Categoria } from '../../categoria/entity/categoria.entity';
 import { NumericTransformer } from '../../util/NumericTransformer';
 
 @Entity({ name: 'tb_produtos' })
 export class Produto {
+
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -26,9 +27,8 @@ export class Produto {
   preco: number;
 
   @Column('date', { nullable: false })
-  @MinDate(new Date(),{message:" A validade precisa ser uma data futura"})
   @Type(()=>Date)
-  dataValidade: Date;
+  dataLancamento: Date;
 
   @Column('int', { nullable: true, default: 0 })
   @Min(0, { message: 'A quantidade não pode ser negativa' })
