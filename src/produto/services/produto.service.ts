@@ -1,8 +1,8 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { Produto } from '../entity/produto.entity';
+import { Produto } from '../entities/produto.entity';
 import { DeleteResult, LessThan, MoreThan, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
-import { CategoriaService } from '../../categoria/service/categoria.service';
+import { CategoriaService } from '../../categoria/services/categoria.service';
 
 @Injectable()
 export class ProdutoService {

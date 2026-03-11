@@ -1,7 +1,7 @@
 import { Transform, Type } from 'class-transformer';
 import {  IsNotEmpty, IsNumber, IsObject, IsOptional, IsUrl, Length, Min } from 'class-validator';
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
-import { Categoria } from '../../categoria/entity/categoria.entity';
+import { Categoria } from '../../categoria/entities/categoria.entity';
 import { NumericTransformer } from '../../util/NumericTransformer';
 
 @Entity({ name: 'tb_produtos' })

@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { ProdutoController } from './controller/produto.controller';
-import { ProdutoService } from './service/produto.service';
+import { ProdutoController } from './controllers/produto.controller';
+import { ProdutoService } from './services/produto.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Produto } from './entity/produto.entity';
+import { Produto } from './entities/produto.entity';
 import { CategoriaModule } from '../categoria/categoria.module';
 
 @Module({ 

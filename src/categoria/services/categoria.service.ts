@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Categoria } from '../entity/categoria.entity';
+import { Categoria } from '../entities/categoria.entity';
 import { DeleteResult, Repository } from 'typeorm';
 
 @Injectable()

@@ -1,7 +1,7 @@
 
 import { DeleteResult } from 'typeorm';
-import { Categoria } from '../entity/categoria.entity';
-import { CategoriaService } from './../service/categoria.service';
+import { Categoria } from '../entities/categoria.entity';
+import { CategoriaService } from '../services/categoria.service';
 import {
     Body,
   Controller,
