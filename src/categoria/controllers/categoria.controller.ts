@@ -43,7 +43,7 @@ export class CategoriaController {
 
   @Put()
   @HttpCode(HttpStatus.OK)
-  update(categoria: Categoria): Promise<Categoria> {
+  update(@Body()categoria: Categoria): Promise<Categoria> {
     return this.categoriaService.update(categoria);
   }
 
